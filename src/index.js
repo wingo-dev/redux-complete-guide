@@ -4,9 +4,12 @@ import './index.css';
 import App from './App';
 import { MantineProvider} from '@mantine/core';
 
+import { Provider } from 'react-redux';
+import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store}>
     <MantineProvider
       withGlobalStyles
       withNormalizeCSS
@@ -34,5 +37,6 @@ root.render(
     >
         <App />
     </MantineProvider>
+    </Provider>
     
 );
