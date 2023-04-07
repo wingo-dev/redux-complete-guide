@@ -1,4 +1,4 @@
-import {MantineProvider, Button} from '@mantine/core';
+import {MantineProvider, Button, Space} from '@mantine/core';
 import { useSelector, useDispatch } from 'react-redux';
 import {toggle} from '../action/index';
 
@@ -24,7 +24,9 @@ function Counter(){
         <div>
             <h1>Counter App</h1>
             <h2>{count}</h2>
+            <div style={{ display: 'flex', justifyContent:'center' }}>
             <Button variant="gradient" onClick={handleIncrement}>Increment</Button>
+            <Space w='xl'/>
             <MantineProvider
                 theme={{
                     defaultGradient: {
@@ -36,9 +38,12 @@ function Counter(){
             >
                 <Button variant="gradient" onClick={handleDrecrement}>Decreament</Button>
             </MantineProvider>
+            </div>
+            <Space h='xl'/>
             <div>
-                {slogan && <h2>The world is your oyster. :P</h2>}
+            
                 <Button variant="gradient" onClick={handleToggle}>Toggle</Button>
+                {slogan && <h2>The world is your oyster. :P</h2>}
             </div>
             
         </div>

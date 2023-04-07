@@ -14,12 +14,21 @@ root.render(
       withGlobalStyles
       withNormalizeCSS
       theme={{
-        colorScheme: 'light',
+        colorScheme: 'dark',
         colors: {
           // Add your color
-          deepBlue: ['#E9EDFC', '#C1CCF6', '#99ABF0'],
+          dark: ['#d5d7e0',
+          '#acaebf',
+          '#8c8fa3',
+          '#666980',
+          '#4d4f66',
+          '#34354a',
+          '#2b2c3d',
+          '#1d1e30',
+          '#0c0d21',
+          '#01010a',],
           // or replace default theme color
-          blue: ['#E9EDFC', '#C1CCF6', '#99ABF0'],
+          // blue: ['#E9EDFC', '#C1CCF6', '#99ABF0'],
         },
 
         shadows: {
