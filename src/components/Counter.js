@@ -22,7 +22,7 @@ function Counter(){
 
     return(
         <div>
-            <h1>Counter App</h1>
+            <h1>Redux Guide App</h1>
             <h2>{count}</h2>
             <div style={{ display: 'flex', justifyContent:'center' }}>
             <Button variant="gradient" onClick={handleIncrement}>Increment</Button>
