@@ -1,4 +1,4 @@
-import { Space, Container } from "@mantine/core";
+import { Space } from "@mantine/core";
 import "./App.css";
 import "./components/Counter";
 import Counter from "./components/Counter";
