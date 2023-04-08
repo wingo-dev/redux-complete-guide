@@ -12,6 +12,10 @@ const Post = () => {
     dispatch(fetchPost());
   };
 
+  posts.map((item) => {
+    console.log(item);
+  });
+
   return (
     <Fragment>
       <div>
@@ -23,7 +27,7 @@ const Post = () => {
           Bring post
         </Button>
       </div>
-      {posts}
+
       <div>
         <Grid>
           <Grid.Col md={6} lg={3}>

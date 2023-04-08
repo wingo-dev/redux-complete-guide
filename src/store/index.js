@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 
 const counterReducer = (
-  state = { counter: 0, showHiden: false, posts: "asdf" },
+  state = { counter: 0, showHiden: false, posts: [] },
   action
 ) => {
   if (action.type === "increment") {
@@ -29,9 +29,10 @@ const counterReducer = (
     }
   }
   if (action.type === "fetch_post") {
+    // console.log(action.payload);
     return {
       ...state,
-      posts: state.posts,
+      posts: action.payload,
     };
   }
 
