@@ -1,4 +1,5 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import thunkMiddleware from "redux-thunk";
 
 const counterReducer = (
   state = { counter: 0, showHiden: false, posts: [] },
@@ -28,8 +29,7 @@ const counterReducer = (
       };
     }
   }
-  if (action.type === "fetch_post") {
-    // console.log(action.payload);
+  if (action.type === "FETCH_POST") {
     return {
       ...state,
       posts: action.payload,
@@ -39,6 +39,6 @@ const counterReducer = (
   return state;
 };
 
-const store = createStore(counterReducer);
+const store = createStore(counterReducer, applyMiddleware(thunkMiddleware));
 
 export default store;

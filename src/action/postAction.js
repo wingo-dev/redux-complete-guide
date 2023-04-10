@@ -1,10 +1,11 @@
-export const fetchPost = () => {
-  let posts = [];
-  fetch("https://jsonplaceholder.typicode.com/posts")
-    .then((response) => response.json())
-    .then((data) => {
-      posts.push(data);
-    });
+export const fetchPostsSuccess = (p) => ({
+  type: "FETCH_POST",
+  payload: p,
+});
 
-  return { type: "fetch_post", payload: posts };
+export const fetchPost = () => async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await response.json();
+  console.log(data);
+  // dispatch(fetchPostsSuccess(data));
 };
